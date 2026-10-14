@@ -1,0 +1,18 @@
+---
+id: 0
+name: Mainnet deployment
+network: mainnet
+stacks-node: "https://stacks-node-api.mainnet.stacks.co"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoin.blockstack.com:8332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: fundraising
+            expected-sender: SPSVT98G3P3Q01SDPYD83R4ZGS52X7E7MWMTSWTM
+            cost: 68210
+            path: contracts/fundraising.clar
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.0"
